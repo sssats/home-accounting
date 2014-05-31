@@ -1,0 +1,18 @@
+<td class="blank"></td>
+<td class="date">
+    <%= created %>
+</td>
+<td class="icon">
+    <% if (typeof(icon)!== 'undefined') { %>
+    <i class="<%= icon %>"></i>
+    <% } %>
+</td>
+<td>
+    <%= categoryName %>
+</td>
+<td class="value">
+    <b><%= value %></b> руб.
+</td>
+<td class="delete">
+    <a href="#" class="remove"><i class="icon icon-cancel-squared"></i></a>
+</td>

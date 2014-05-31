@@ -1,0 +1,253 @@
+
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+@base: #767197;
+@base-light: #f3f3f3;
+@base-dark: #666;
+
+html {
+  background-color: @base-light;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 20px;
+  color: @base-dark;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.row {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h3.section-title {
+  margin: 0 0 20px 0;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  border-bottom: 1px solid @base;
+}
+
+header {
+  background: @base;
+  box-shadow: 0px 5px 15px 0px rgba(118, 113, 151, 0.2);
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 20px 20px 20px 0;
+      a {
+        color: @base-light;
+        text-decoration: none;
+        text-shadow: 0px 1px 1px #666;
+        font-weight: bold;
+        &:hover, &.active {
+          padding-bottom: 1px;
+          border-bottom: 3px solid @base-light;
+        }
+      }
+    }
+  }
+}
+
+#main-content {
+  margin-top: 50px;
+}
+
+.home {
+  .charts {
+    overflow: hidden;
+    .chart {
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
+.add-form {
+  margin-bottom: 50px;
+
+  .form-group {
+    select {
+      width: 150px;
+    }
+    a.add-item {
+      padding: 11px 11px 11px 13px;
+      background: @base;
+      border-radius: 2px;
+      color: @base-light;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    input, select, button {
+      padding: 5px;
+      font-size: 20px;
+      border: 1px solid @base;
+      border-radius: 2px;
+      color: @base-dark;
+      margin: 0;
+    }
+  }
+}
+
+.add-item-form {
+  a.add-item {
+    margin-left: 5px;
+  }
+  input#item {
+    width: 200px;
+    padding: 6px;
+  }
+  input#date {
+    width: 70px;
+    padding: 6px;
+  }
+
+}
+
+.add-category-form {
+  overflow: hidden;
+  .form-group {
+    float: left;
+    &.left {
+      width: 30%;
+      input#title {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      .radio {
+        margin: 0 0 10px 1px;
+      }
+    }
+    &.right {
+      float: left;
+      width: 70%;
+      ul {
+        width: 100%;
+        padding-left: 20px;
+        li {
+          display: inline-block;
+          padding: 3px 2px;
+          cursor: pointer;
+          &.active {
+            background: @base;
+            i {
+              color: @base-light;
+            }
+          }
+          i {
+            color: @base-dark;
+          }
+        }
+      }
+    }
+  }
+}
+
+table.table {
+  width: 100%;
+  tr {
+    &.item-plus {
+      background: #d2ffd3;
+    }
+    &.item-minus {
+      background: #ffd6d2;
+    }
+    td {
+      padding: 15px;
+      border-bottom: 1px solid @base;
+      &.delete {
+        width: 30px;
+        i {
+          color: @base;
+        }
+      }
+    }
+  }
+}
+
+div.spendings-table {
+  table.table {
+    tr {
+      &.item-plus {
+        .value {
+          b {
+            padding-left: 10px;
+          }
+        }
+      }
+      td {
+        &.icon {
+          width: 28px;
+          padding: 15px 0;
+          i {
+            color: @base;
+          }
+        }
+        &.date {
+          width: 65px;
+        }
+        &.value {
+          width: 120px;
+          b {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  .total-sum {
+    margin: 15px 15px 15px 5px;
+  }
+}
+
+div.categories-table {
+  tr {
+    td {
+      &.icon {
+        padding: 15px 0 15px 15px;
+        i {
+          color: @base;
+        }
+      }
+      &.title {
+        position: relative;
+        width: 80%;
+        p.edit {
+          position: absolute;
+          top: 4px;
+          input {
+            padding: 4px;
+            border: 1px solid @base;
+            border-radius: 2px;
+            color: @base-dark;
+            font-size: 20px;
+            width: 250px;
+          }
+          i.close {
+            position: relative;
+            left: -35px;
+            color: rgba(0, 0, 0, 0.10);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "highchart.less";

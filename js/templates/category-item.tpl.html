@@ -1,0 +1,21 @@
+<td class="icon">
+    <i class="<%= typeof(icon)!== 'undefined' ?  icon : '' %>"></i>
+</td>
+<td class="title">
+    <p><%= title %></p>
+
+    <p class="edit" style="display: none">
+        <input type="text" placeholder="Введите название" value="<%= title %>" />
+        <i class="icon icon-cancel-squared close"></i>
+    </p>
+</td>
+<td class="is-income">
+    <% if (isIncome == true) { %>
+    Доход
+    <% } else { %>
+    Расход
+    <% } %>
+</td>
+<td class="delete">
+    <a href="#" class="remove"><i class="icon icon-cancel-squared"></i></a>
+</td>
