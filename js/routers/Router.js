@@ -22,8 +22,6 @@ define([
             })
         },
         routes: {
-            // Define some URL routes
-            // Default
             '*actions': 'home'
         },
         home: function () {
