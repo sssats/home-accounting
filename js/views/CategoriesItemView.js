@@ -56,6 +56,7 @@ define([
             $td.find('p.edit').hide();
         },
         render: function () {
+            console.log(this.model.get('budget'))
             this.$el.html(this.template(this.model.toJSON()));
             this.$el.addClass(this.model.get('isIncome') === true ? "item-plus" : "item-minus");
             return this;

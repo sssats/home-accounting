@@ -76,22 +76,23 @@ header {
   }
 }
 
+a.button {
+  padding: 11px 11px 11px 13px;
+  background: @base;
+  border-radius: 2px;
+  color: @base-light;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+}
+
 .add-form {
   margin-bottom: 50px;
 
   .form-group {
     select {
       width: 150px;
-    }
-    a.add-item {
-      padding: 11px 11px 11px 13px;
-      background: @base;
-      border-radius: 2px;
-      color: @base-light;
-      cursor: pointer;
-      display: inline-block;
-      font-weight: bold;
-      font-size: 18px;
     }
     input, select, button {
       padding: 5px;
@@ -125,7 +126,7 @@ header {
     float: left;
     &.left {
       width: 30%;
-      input#title {
+      input#title, input#budget {
         margin-bottom: 10px;
         width: 100%;
       }
@@ -216,6 +217,17 @@ div.spendings-table {
 }
 
 div.categories-table {
+  td.budget {
+    min-width: 110px;
+  }
+  thead {
+    tr {
+      td {
+        font-weight: bold;
+        padding-bottom: 2px;
+      }
+    }
+  }
   tr {
     td {
       &.icon {
@@ -226,7 +238,7 @@ div.categories-table {
       }
       &.title {
         position: relative;
-        width: 80%;
+        width: 60%;
         p.edit {
           position: absolute;
           top: 4px;

@@ -12,17 +12,17 @@ define([
             var APP_KEY = 'tkpq7yyr9hqkbds';
 
             client = new Dropbox.Client({key: APP_KEY});
-            client.authenticate({interactive: false});
-            if (!client.isAuthenticated()) client.authenticate();
+            client.authenticate({interactive: true});
+            if (!client.isAuthenticated()) {
+                client.authenticate({interactive: true});
+            }
             Backbone.DropboxDatastore.client = client;
-            console.log(client.isAuthenticated());
 
             var router = new Router();
-            
-            console.log(client)
 
             $('.logout').on('click', function () {
                 client.signOff();
+                window.location = "/";
             });
 
 

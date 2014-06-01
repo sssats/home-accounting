@@ -14,6 +14,7 @@ define([
         initialize: function (options) {
             this.data = {
                 created: options.model.get('created'),
+                title: options.model.get('title'),
                 value: options.model.get('value'),
                 categoryName: options.category.get('title'),
                 icon: options.category.get('icon')

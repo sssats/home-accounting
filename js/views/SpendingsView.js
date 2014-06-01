@@ -41,11 +41,13 @@ define([
             this.items.each(this.addOne, this);
         },
         saveItem: function () {
+            var title = this.$el.find('#title').val();
             var val = this.$el.find('#item').val();
             var category = this.categories.get(this.$el.find('option:selected').data('categoryId'));
             var date = this.$el.find('#date').val() == '' ? $.format.date(new Date(), 'dd/MM/yy') : this.$el.find('#date').val();
             if (val !== '') {
                 this.items.create({
+                    title: title,
                     value: parseInt(val),
                     categoryId: category.get('id'),
                     created: date

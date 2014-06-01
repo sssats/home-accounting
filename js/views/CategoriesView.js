@@ -30,10 +30,10 @@ define([
         },
         addOne: function (item) {
             var view = new ItemView({model: item, parentView: this});
-            this.$el.find('table.table').append(view.render().el);
+            this.$el.find('table.table tbody').append(view.render().el);
         },
         addAll: function () {
-            this.$el.find('table.table').html('');
+            this.$el.find('table.table table.table tbody').html('');
             this.collection.each(this.addOne, this);
         },
         render: function () {
@@ -42,11 +42,13 @@ define([
         },
         addItem: function () {
             var title = this.$el.find('#title').val();
+            var budget = this.$el.find('#budget').val();
             var isIncome = this.$el.find("input[name='isIncome']:checked").val() === "true" ? true : false;
             if (title !== '' && isIncome !== null) {
                 this.collection.create({
                     title: title,
                     isIncome: isIncome,
+                    budget: parseInt(budget),
                     icon: this.selectedIcon
                 });
 

@@ -5,7 +5,7 @@
     <p><%= title %></p>
 
     <p class="edit" style="display: none">
-        <input type="text" placeholder="Введите название" value="<%= title %>" />
+        <input type="text" placeholder="Введите название" value="<%= title %>"/>
         <i class="icon icon-cancel-squared close"></i>
     </p>
 </td>
@@ -15,6 +15,9 @@
     <% } else { %>
     Расход
     <% } %>
+</td>
+<td class="budget">
+    <%= typeof(budget)!== 'undefined' ? budget : '' %> руб.
 </td>
 <td class="delete">
     <a href="#" class="remove"><i class="icon icon-cancel-squared"></i></a>

@@ -6,11 +6,14 @@
 </td>
 <td class="icon">
     <% if (typeof(icon)!== 'undefined') { %>
-        <i class="<%= icon %>"></i>
+    <i class="<%= icon %>"></i>
     <% } %>
 </td>
 <td>
     <%= categoryName %>
+</td>
+<td>
+    <%= typeof(title)!== 'undefined' ? title : '' %>
 </td>
 <td class="value">
     <b>- <%= value %></b> руб.

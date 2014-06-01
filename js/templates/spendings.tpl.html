@@ -3,14 +3,15 @@
 
     <div class="form-group">
         <input type="text" id="item" placeholder="Сумма руб.">
-        <input type="text" id="date" placeholder="Дата">
         <select class="form-control category" id="category">
             <option>Категория</option>
             <% _.each(categories, function(category){ %>
             <option data-category-id="<%= category.attributes.id %>"><%= category.attributes.title %></option>
             <% }); %>
         </select>
-        <a class="add-item">Добавить<i class="icon icon-plus-squared"></i></a>
+        <input type="text" id="title" placeholder="Описание">
+        <input type="text" id="date" placeholder="Дата">
+        <a class="add-item button">Добавить<i class="icon icon-plus-squared"></i></a>
     </div>
 </div>
 <div class="spendings-table">

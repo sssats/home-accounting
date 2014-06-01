@@ -3,6 +3,7 @@
 
     <div class="form-group left">
         <input type="text" id="title" placeholder="Название категории">
+        <input type="text" id="budget" placeholder="Запланированный бюджет">
 
         <div class="radio">
             <label>
@@ -14,7 +15,7 @@
                 Доход
             </label>
         </div>
-        <a class="add-item">Добавить<i class="icon icon-plus-squared"></i></a>
+        <a class="add-item button">Добавить<i class="icon icon-plus-squared"></i></a>
     </div>
     <div class="form-group right">
         <ul class="category-icons">
@@ -88,5 +89,23 @@
 <div class="categories-table">
     <h3 class="section-title">Категории</h3>
     <table class="table">
+        <thead>
+        <tr>
+            <td class="icon">
+            </td>
+            <td class="title">
+                Название категории
+            </td>
+            <td class="is-income">
+                +/-
+            </td>
+            <td class="budget">
+                Бюджет
+            </td>
+            <td class="delete">
+            </td>
+        </tr>
+        </thead>
+        <tbody></tbody>
     </table>
 </div>
