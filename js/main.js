@@ -2,8 +2,8 @@ requirejs.config({
     baseUrl: "js/",
     paths: {
         "jquery": "vendors/jquery.min",
-        "underscore": "vendors/underscore-min", /*This is amd version of underscore */
-        "backbone": "vendors/backbone-min", /*This is amd version of backbone   */
+        "underscore": "vendors/underscore-min",
+        "backbone": "vendors/backbone-min",
         "dropbox": "vendors/backbone.dropboxDatastore",
         "controller": "vendors/backbone.controller",
         "text": "vendors/text",

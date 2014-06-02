@@ -20,7 +20,14 @@ define([
             _.each(this.items, function (item) {
                 sum += item.get('value');
             })
-            //this.model.set('sum', sum)
+            console.log(sum)
+            this.data = {
+                icon: this.model.get('icon'),
+                title: this.model.get('title'),
+                isIncome: this.model.get('isIncome'),
+                budget: this.model.get('budget'),
+                sum: sum
+            }
         },
         delete: function (e) {
             var self = this;
@@ -56,9 +63,8 @@ define([
             $td.find('p.edit').hide();
         },
         render: function () {
-            console.log(this.model.get('budget'))
-            this.$el.html(this.template(this.model.toJSON()));
-            this.$el.addClass(this.model.get('isIncome') === true ? "item-plus" : "item-minus");
+            this.$el.html(this.template(this.data));
+            this.$el.addClass(this.data.isIncome === true ? "item-plus" : "item-minus");
             return this;
         }
     });

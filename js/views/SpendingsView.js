@@ -6,7 +6,8 @@ define([
     'models/Categories',
     'views/SpendingItemView',
     'text!templates/spendings.tpl.html',
-    'datePicker'
+    'datePicker',
+    'date'
 ], function ($, _, Backbone, Items, Categories, ItemView, addItemTemplate) {
     var SpendingsView = Backbone.View.extend({
         template: _.template(addItemTemplate),
@@ -34,9 +35,6 @@ define([
             this.updateSum();
         },
         addAll: function () {
-            /*this.items.each(function(item){
-             item.destroy();
-             })*/
             this.$el.find('table.table').html('');
             this.items.each(this.addOne, this);
         },
@@ -64,9 +62,10 @@ define([
         },
         render: function () {
             this.contentArea.html(this.$el.html(this.template({categories: this.categories.models})));
+            $('.form-group form').validate();
             $('#date').pickmeup({
                 format: 'd/m/y',
-                change: function(){
+                change: function () {
                     $(this).pickmeup('hide');
                 }
             });
