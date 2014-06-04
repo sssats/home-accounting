@@ -62,7 +62,6 @@ define([
         },
         render: function () {
             this.contentArea.html(this.$el.html(this.template({categories: this.categories.models})));
-            $('.form-group form').validate();
             $('#date').pickmeup({
                 format: 'd/m/y',
                 change: function () {
