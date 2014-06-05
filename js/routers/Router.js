@@ -22,10 +22,10 @@ define([
             })
         },
         routes: {
-            '*actions': 'home'
+            '*actions': 'categories'
         },
-        home: function () {
-            this.navigate("#home", {trigger: true});
+        categories: function () {
+            this.navigate("#categories", {trigger: true});
         }
     });
 
