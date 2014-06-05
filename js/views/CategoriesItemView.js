@@ -20,7 +20,6 @@ define([
             _.each(this.items, function (item) {
                 sum += item.get('value');
             })
-            console.log(sum)
             this.data = {
                 icon: this.model.get('icon'),
                 title: this.model.get('title'),
